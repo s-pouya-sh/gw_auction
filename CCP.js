@@ -1,6 +1,8 @@
 const fs = require('fs')
 
-const ccp_path = './connection-org1.json'
+const ccp_path = './_file.connectionProfile.json'
+
+
 
 function loadCCP(){
     const ccp = JSON.parse(
@@ -10,15 +12,7 @@ function loadCCP(){
     return ccp        
 }
 
-function getCA(){
-    const ccp = loadCCP()
-    const ca = ccp['certificateAuthorities']['ca.org1.example.com']
-    console.log(ca)
-    return ca
-}
-
 
 module.exports = {
-    loadCCP,
-    getCA
+    loadCCP
 }
